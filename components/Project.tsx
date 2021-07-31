@@ -19,6 +19,7 @@ export default function Project() {
           </header>
           <Image
             src={bg}
+            alt="Project thumbnail"
             placeholder="blur"
             height={225}
             width={384}

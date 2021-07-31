@@ -21,6 +21,7 @@ export default function SocialLink() {
             key={sl.label}
             href={sl.url}
             target="_blank"
+            rel="noreferrer noopener"
             className="block sm:inline-block h-12 w-12 rounded-full bg-gray-900 dark:bg-gray-100"
           >
             <div className="flex items-center justify-center h-full">
