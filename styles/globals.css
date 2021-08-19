@@ -2,9 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
+@layer components {
   .dark {
     @apply bg-black;
+  }
+  .sp-text {
+    @apply px-2 font-medium rounded-md;
   }
 }
 

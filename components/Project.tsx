@@ -1,33 +1,30 @@
-import React, { useContext } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import bg from "@/public/images/bg.png";
-import { context } from "pages/_app";
 
 export default function Project() {
-  const states: { state?: string; setState?: React.SetStateAction<any> } =
-    useContext(context);
+  const [clicked, setClicked] = useState(false);
   return (
-    <div id="projects" className="mt-4 grid sm:grid-cols-2 gap-6">
-      {[1, 2, 3, 4, 5, 6].map((item, idx) => (
-        <div
-          onClick={() => states.setState("hello" + item)}
-          key={idx}
-          className="w-full h-48 border-2 border-gray-200 dark:border-gray-700 rounded-md overflow-y-hidden relative"
-        >
-          <header className="py-1 px-2 border-b-2 border-gray-200 dark:border-gray-700">
-            <div className="toolbar w-3 h-3 bg-gray-300 dark:bg-gray-700 rounded-full"></div>
-          </header>
-          <Image
-            src={bg}
-            alt="Project thumbnail"
-            placeholder="blur"
-            height={225}
-            width={384}
-            objectFit="cover"
-            objectPosition="center"
-          />
-        </div>
-      ))}
+    <div
+      onClick={() => setClicked(!clicked)}
+      className="relative w-full h-48 max-w-sm overflow-y-hidden border-2 border-gray-200 rounded-md dark:border-gray-700"
+    >
+      <header
+        className={`px-2 py-1 border-b-2 border-gray-200 dark:border-gray-700 ${
+          clicked ? "animate-reveal" : ""
+        }`}
+      >
+        <div className="w-3 h-3 bg-gray-300 rounded-full toolbar dark:bg-gray-700"></div>
+      </header>
+      <Image
+        src={bg}
+        alt="Project thumbnail"
+        placeholder="blur"
+        height={216}
+        width={384}
+        objectFit="cover"
+        objectPosition="center"
+      />
     </div>
   );
 }
