@@ -1,7 +1,11 @@
-import React from "react";
+import { ReactNode } from "react";
 
-export default function Layout({ children }: { children: React.ReactNode }) {
+interface Props {
+  children: ReactNode;
+}
+
+export default function Layout({ children }: Props) {
   return (
-    <main className="container max-w-3xl mx-auto px-6 py-8">{children}</main>
+    <main className="container max-w-3xl px-6 py-8 mx-auto">{children}</main>
   );
 }
