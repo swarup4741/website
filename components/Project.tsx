@@ -1,29 +1,55 @@
 import React, { useState } from "react";
 import Image from "next/image";
-import bg from "@/public/images/bg.png";
+import Button from "./Button";
 
-export default function Project() {
+interface ImageMetaProps {
+  src: StaticImageData;
+  alt: string;
+  github: string;
+  web: string;
+  projectType: string;
+}
+
+export default function Project({
+  src,
+  alt,
+  github,
+  web,
+  projectType
+}: ImageMetaProps) {
   const [clicked, setClicked] = useState(false);
   return (
     <div
       onClick={() => setClicked(!clicked)}
-      className="relative w-full h-48 max-w-sm overflow-y-hidden border-2 border-gray-200 rounded-md dark:border-gray-700"
+      className="relative w-full max-w-sm overflow-y-hidden border-2 border-gray-200 rounded-md cursor-pointer dark:border-gray-700"
     >
-      <header
-        className={`px-2 py-1 border-b-2 border-gray-200 dark:border-gray-700 ${
-          clicked ? "animate-reveal" : ""
+      <header className="flex items-center px-2 py-1 border-b-2 border-gray-200 dark:border-gray-700">
+        <div className="w-3 h-3 bg-gray-300 rounded-full toolbar dark:bg-gray-700"></div>
+        <div className="w-2/3 ml-12 bg-gray-200 rounded-sm dark:bg-gray-800">
+          <p className="grid text-sm text-gray-600 place-items-center dark:text-gray-400">
+            {projectType}
+          </p>
+        </div>
+      </header>
+      <nav
+        className={`absolute inset-0 flex flex-col items-center justify-center gap-4 ${
+          clicked ? "z-10" : null
         }`}
       >
-        <div className="w-3 h-3 bg-gray-300 rounded-full toolbar dark:bg-gray-700"></div>
-      </header>
+        <Button href={github}>Source code</Button>
+        <Button href={web}>Live demo</Button>
+      </nav>
       <Image
-        src={bg}
-        alt="Project thumbnail"
+        className={`transition-transform ${
+          clicked ? "transform translate-y-full" : null
+        }`}
+        src={src}
+        alt={alt}
         placeholder="blur"
         height={216}
         width={384}
         objectFit="cover"
-        objectPosition="center"
+        layout="responsive"
       />
     </div>
   );
