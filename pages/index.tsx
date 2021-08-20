@@ -36,6 +36,7 @@ export default function Home() {
         >
           {projects.map(p => (
             <Project
+              key={p.id}
               src={p.src}
               alt={p.alt}
               github={p.github}

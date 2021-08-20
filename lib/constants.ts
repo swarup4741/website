@@ -26,6 +26,7 @@ export const navLinks = [
 
 export const projects = [
   {
+    id: "project1",
     src: stacksense,
     alt: "stacksense project thumbnail",
     github: "https://github.com/swarup4741/stacksense",
@@ -33,6 +34,7 @@ export const projects = [
     projectType: "Personal"
   },
   {
+    id: "project2",
     src: covid,
     alt: "covid19 project thumbnail",
     github: "https://github.com/swarup4741/Covid19HelpIndia-react",
@@ -40,6 +42,7 @@ export const projects = [
     projectType: "Personal"
   },
   {
+    id: "project3",
     src: spark,
     alt: "spark project thumbanil",
     github: "https://github.com/swarup4741/spark",
@@ -47,6 +50,7 @@ export const projects = [
     projectType: "Personal"
   },
   {
+    id: "project4",
     src: calculator,
     alt: "calculator project thumbnail",
     github: "https://github.com/swarup4741/calculator",
@@ -54,6 +58,7 @@ export const projects = [
     projectType: "Personal"
   },
   {
+    id: "project5",
     src: rhymojs,
     alt: "rhymojs project thumbnail",
     github: "https://github.com/rhymojs/rhymojs",
@@ -61,6 +66,7 @@ export const projects = [
     projectType: "Open Source"
   },
   {
+    id: "project6",
     src: frontendro,
     alt: "frontend.ro project thumbail",
     github: "https://github.com/FrontEnd-ro/frontend.ro",
