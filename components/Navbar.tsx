@@ -13,7 +13,7 @@ export default function Navbar() {
   useEffect(() => setMounted(true), []);
 
   return (
-    <nav className="sticky top-0 z-10 bg-gray-200 border border-gray-300 backdrop-filter backdrop-blur-xl saturate-200 dark:bg-gray-900 bg-opacity-70 dark:bg-opacity-80 dark:border-gray-800">
+    <nav className="sticky top-0 z-20 bg-gray-200 border border-gray-300 backdrop-filter backdrop-blur-xl saturate-200 dark:bg-gray-900 bg-opacity-70 dark:bg-opacity-80 dark:border-gray-800">
       <div className="max-w-3xl px-6 py-4 mx-auto">
         <ul className="flex items-center justify-between">
           {navLinks.map(navLink => (

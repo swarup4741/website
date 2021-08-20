@@ -1,6 +1,7 @@
 import Layout from "@/components/Layout";
 import Project from "@/components/Project";
 import SocialLink from "@/components/SocialLink";
+import { projects } from "@/lib/constants";
 
 export default function Home() {
   return (
@@ -33,12 +34,15 @@ export default function Home() {
           id="projects"
           className="grid gap-6 mt-4 sm:grid-cols-2 place-items-center"
         >
-          <Project />
-          <Project />
-          <Project />
-          <Project />
-          <Project />
-          <Project />
+          {projects.map(p => (
+            <Project
+              src={p.src}
+              alt={p.alt}
+              github={p.github}
+              web={p.web}
+              projectType={p.projectType}
+            />
+          ))}
         </div>
       </div>
     </Layout>
