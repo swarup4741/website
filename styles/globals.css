@@ -2,6 +2,27 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  h1 {
+    @apply text-3xl font-bold md:text-5xl;
+  }
+  h2 {
+    @apply text-2xl font-bold md:text-4xl;
+  }
+  h3 {
+    @apply text-xl font-bold md:text-2xl;
+  }
+  h4 {
+    @apply text-lg font-semibold md:text-xl;
+  }
+  p {
+    @apply leading-relaxed tracking-wide text-gray-800 dark:text-gray-300;
+  }
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 10rem;
+  }
+}
 @layer components {
   .dark {
     @apply bg-black;
@@ -9,17 +30,53 @@
   .sp-text {
     @apply px-2 font-medium rounded-md;
   }
-}
-
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 10rem;
-}
-
-.toolbar {
-  box-shadow: 1.1rem 0 0 #d1d5db, 2.2rem 0 0 #d1d5db;
-}
-
-.dark .toolbar {
-  box-shadow: 1.1rem 0 0 #3f3f46, 2.2rem 0 0 #3f3f46;
+  .toolbar {
+    box-shadow: 1.1rem 0 0 #d1d5db, 2.2rem 0 0 #d1d5db;
+  }
+  .dark .toolbar {
+    box-shadow: 1.1rem 0 0 #3f3f46, 2.2rem 0 0 #3f3f46;
+  }
+  .thread-mark::before {
+    position: absolute;
+    content: "";
+    padding: 0.6rem;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    border: 2px solid rgba(59, 130, 246);
+    background-color: #fff;
+    left: -2.3rem;
+  }
+  .dark .thread-mark::before {
+    background-color: #000;
+  }
+  .sub-thread-mark::before {
+    position: absolute;
+    z-index: 10;
+    content: "▲";
+    top: 50%;
+    transform: translateY(-50%);
+    left: -2.05rem;
+  }
+  .thread-line::before {
+    position: absolute;
+    content: "";
+    height: 120%;
+    width: 2px;
+    background-color: #d1d5db;
+    left: -1.61rem;
+    top: -1.62rem;
+  }
+  .dark .thread-line::before {
+    background-color: #3f3f46;
+  }
+  @media (min-width: 768px) {
+    .thread-line::before {
+      left: -1.63rem;
+      top: -1.77rem;
+    }
+    .sub-thread-mark::before {
+      left: -2.1rem;
+    }
+  }
 }
