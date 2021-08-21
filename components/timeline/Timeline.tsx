@@ -40,7 +40,7 @@ export default function Timeline() {
         </Activity>
         <Activity title="Got into web designing">
           I always loved painting and designing. When I found that I could also
-          paint the web with all beautiful colors and animations that's when it
+          paint the web with all beautiful colors and animations that is when it
           all clicked.
         </Activity>
       </Year>
