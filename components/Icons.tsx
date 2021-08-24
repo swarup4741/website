@@ -15,7 +15,7 @@ export function Moon() {
         strokeLinejoin="round"
       />
     </svg>
-  );
+  )
 }
 
 export function Sun() {
@@ -35,5 +35,5 @@ export function Sun() {
         strokeLinejoin="round"
       />
     </svg>
-  );
+  )
 }

@@ -1,6 +1,6 @@
-import errorBg from "@/public/images/errorBg.png";
-import Image from "next/image";
-import Layout from "@/components/Layout";
+import errorBg from '@/public/images/errorBg.png'
+import Image from 'next/image'
+import Layout from '@/components/Layout'
 
 export default function errorPage() {
   return (
@@ -19,5 +19,5 @@ export default function errorPage() {
         </p>
       </div>
     </Layout>
-  );
+  )
 }

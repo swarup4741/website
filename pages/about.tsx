@@ -1,5 +1,5 @@
-import Layout from "@/components/Layout";
-import Timeline from "@/components/timeline";
+import Layout from '@/components/Layout'
+import Timeline from '@/components/timeline'
 
 export default function about() {
   return (
@@ -15,5 +15,5 @@ export default function about() {
       <Timeline />
       <p className="mt-16 ml-9">to be continued...</p>
     </Layout>
-  );
+  )
 }
