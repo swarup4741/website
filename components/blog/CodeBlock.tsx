@@ -30,3 +30,5 @@ export default function CodeBlock({ children, className }: codeProps) {
     </Highlight>
   )
 }
+
+CodeBlock.displayName = 'code'
