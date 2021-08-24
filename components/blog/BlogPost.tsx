@@ -22,6 +22,7 @@ export default function BlogPost({
           width={35}
           objectFit="cover"
           className="rounded-full"
+          alt="blog author avatar"
         />
         <p>Swarup Kumar Das · {publishedAt}</p>
       </div>
@@ -32,6 +33,7 @@ export default function BlogPost({
         width={384}
         className="rounded-lg"
         objectFit="cover"
+        alt="blog image"
       />
     </>
   )
