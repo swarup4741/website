@@ -4,7 +4,10 @@ import Layout from '@/components/Layout'
 
 export default function errorPage() {
   return (
-    <Layout>
+    <Layout
+      title="Page not found"
+      description="Oops! Looks like the page you are looking for currently doesn’t exist."
+    >
       <div className="flex flex-col items-center space-y-8">
         <Image
           src={errorBg}

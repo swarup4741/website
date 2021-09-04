@@ -6,7 +6,7 @@ interface LayoutProps {
   children: ReactNode
   title: NextSeoProps['title']
   description: NextSeoProps['description']
-  openGraph: NextSeoProps['openGraph']
+  openGraph?: NextSeoProps['openGraph']
 }
 
 export default function Layout({
