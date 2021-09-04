@@ -1,5 +1,5 @@
-import Activity from "./Activity";
-import Year from "./Year";
+import Activity from './Activity'
+import Year from './Year'
 
 export default function Timeline() {
   return (
@@ -22,7 +22,7 @@ export default function Timeline() {
         </Activity>
         <Activity title="Learnt React, React-router">
           I really enjoyed learning react and also got to know what’s under hood
-          of it, the very core of react, Thanks to Tejas Kumar for his amazing{" "}
+          of it, the very core of react, Thanks to Tejas Kumar for his amazing{' '}
           <a href="https://youtu.be/f2mMOiCSj5c" className="text-blue-500">
             talk
           </a>
@@ -45,5 +45,5 @@ export default function Timeline() {
         </Activity>
       </Year>
     </div>
-  );
+  )
 }

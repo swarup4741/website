@@ -1,13 +1,13 @@
-import React, { useState } from "react";
-import Image from "next/image";
-import Button from "./Button";
+import React, { useState } from 'react'
+import Image from 'next/image'
+import Button from './Button'
 
 interface ImageMetaProps {
-  src: StaticImageData;
-  alt: string;
-  github: string;
-  web: string;
-  projectType: string;
+  src: StaticImageData
+  alt: string
+  github: string
+  web: string
+  projectType: string
 }
 
 export default function Project({
@@ -17,7 +17,7 @@ export default function Project({
   web,
   projectType
 }: ImageMetaProps) {
-  const [clicked, setClicked] = useState(false);
+  const [clicked, setClicked] = useState(false)
   return (
     <div
       onClick={() => setClicked(!clicked)}
@@ -33,7 +33,7 @@ export default function Project({
       </header>
       <nav
         className={`absolute inset-0 flex flex-col items-center justify-center gap-4 ${
-          clicked ? "z-10" : null
+          clicked ? 'z-10' : null
         }`}
       >
         <Button href={github}>Source code</Button>
@@ -41,7 +41,7 @@ export default function Project({
       </nav>
       <Image
         className={`transition-transform ${
-          clicked ? "transform translate-y-full" : null
+          clicked ? 'transform translate-y-full' : null
         }`}
         src={src}
         alt={alt}
@@ -52,5 +52,5 @@ export default function Project({
         layout="responsive"
       />
     </div>
-  );
+  )
 }

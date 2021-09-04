@@ -16,7 +16,7 @@
     @apply text-lg font-semibold md:text-xl;
   }
   p {
-    @apply leading-relaxed tracking-wide text-gray-800 dark:text-gray-300;
+    @apply leading-relaxed text-gray-700 dark:text-gray-400;
   }
   html {
     scroll-behavior: smooth;
@@ -38,7 +38,7 @@
   }
   .thread-mark::before {
     position: absolute;
-    content: "";
+    content: '';
     padding: 0.6rem;
     top: 50%;
     transform: translateY(-50%);
@@ -53,14 +53,14 @@
   .sub-thread-mark::before {
     position: absolute;
     z-index: 10;
-    content: "▲";
+    content: '★';
     top: 50%;
     transform: translateY(-50%);
     left: -2.05rem;
   }
   .thread-line::before {
     position: absolute;
-    content: "";
+    content: '';
     height: 120%;
     width: 2px;
     background-color: #d1d5db;
@@ -69,6 +69,9 @@
   }
   .dark .thread-line::before {
     background-color: #3f3f46;
+  }
+  .hide-sideChild {
+    z-index: -10;
   }
   @media (min-width: 768px) {
     .thread-line::before {

@@ -15,7 +15,7 @@ export function Moon() {
         strokeLinejoin="round"
       />
     </svg>
-  );
+  )
 }
 
 export function Sun() {
@@ -35,5 +35,87 @@ export function Sun() {
         strokeLinejoin="round"
       />
     </svg>
-  );
+  )
+}
+
+export function Like() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className="w-10 h-10 text-blue-500"
+      fill="rgba(96, 165, 250)"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={1.5}
+        d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"
+      />
+    </svg>
+  )
+}
+
+export function Heart() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className="w-10 h-10 text-red-600"
+      fill="rgba(248, 113, 113)"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={1.5}
+        d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+      />
+    </svg>
+  )
+}
+
+export function Bulb() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className="w-10 h-10 text-green-600"
+      fill="rgba(74, 222, 128)"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={1.5}
+        d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+      />
+    </svg>
+  )
+}
+
+export function Fire() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className="w-10 h-10 text-yellow-600"
+      fill="rgba(251, 191, 36)"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={1.5}
+        d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"
+      />
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={1.5}
+        d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z"
+      />
+    </svg>
+  )
 }

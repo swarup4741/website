@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <footer className="max-w-3xl px-6 mx-auto my-6">
-      <hr className="h-1 bg-gray-300 border-none dark:bg-gray-700 " />
+      <hr className="border-gray-400 dark:border-gray-600" />
       <div className="flex flex-col items-center md:flex-row md:justify-between">
         <p className="my-6 sm:text-lg">
           Built with Next.js, MDX, Tailwind and Vercel
@@ -28,5 +28,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  );
+  )
 }

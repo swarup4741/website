@@ -1,7 +1,7 @@
-import React from "react";
-import Image from "next/image";
-import SwarupImg from "@/public/images/self.jpg";
-import Button from "@/components/Button";
+import React from 'react'
+import Image from 'next/image'
+import SwarupImg from '@/public/images/self.jpg'
+import Button from '@/components/Button'
 
 export default function SocialLink() {
   return (
@@ -22,5 +22,5 @@ export default function SocialLink() {
         />
       </div>
     </div>
-  );
+  )
 }
