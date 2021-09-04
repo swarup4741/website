@@ -1,9 +1,27 @@
 import Layout from '@/components/Layout'
 import Timeline from '@/components/timeline'
+import { MAIN_URL } from '@/lib/constants'
 
 export default function about() {
   return (
-    <Layout>
+    <Layout
+      title="About"
+      description="About myself and my journey so far."
+      openGraph={{
+        url: MAIN_URL + '/about',
+        title: 'Swarup Kumar Das | About',
+        description: 'About myself and my journey so far.',
+        images: [
+          {
+            url: MAIN_URL + '/images/og.png',
+            height: 216,
+            width: 384,
+            alt: 'Og blog page image'
+          }
+        ],
+        site_name: 'Swarup Kumar Das'
+      }}
+    >
       <h1>My Journey</h1>
       <p className="max-w-2xl my-6 text-lg">
         I have been coding since 2013 but when I got admitted to college in 2017

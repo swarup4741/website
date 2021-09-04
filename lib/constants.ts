@@ -5,6 +5,8 @@ import calculator from '@/public/images/calculator.png'
 import rhymojs from '@/public/images/rhymojs.png'
 import frontendro from '@/public/images/frontendro.png'
 
+export const MAIN_URL = 'https://swarup.vercel.app'
+
 export const navLinks = [
   {
     label: 'Home',
@@ -74,6 +76,8 @@ export const projects = [
     projectType: 'Open Source'
   }
 ]
+
+// for reaction button animations
 
 export const sideChild = [
   {

@@ -1,11 +1,29 @@
 import Layout from '@/components/Layout'
 import Project from '@/components/Project'
 import SocialLink from '@/components/SocialLink'
-import { projects } from '@/lib/constants'
+import { MAIN_URL, projects } from '@/lib/constants'
 
 export default function Home() {
   return (
-    <Layout>
+    <Layout
+      title="Home"
+      description="I love writing and reading code.A designer not by profession but by passion."
+      openGraph={{
+        url: MAIN_URL + '/',
+        title: 'Swarup Kumar Das',
+        description:
+          'I love writing and reading code.A designer not by profession but by passion.',
+        images: [
+          {
+            url: MAIN_URL + '/images/og.png',
+            height: 216,
+            width: 384,
+            alt: 'Og home page image'
+          }
+        ],
+        site_name: 'Swarup Kumar Das'
+      }}
+    >
       <h1>Hi, I’m Swarup Das</h1>
       <p className="max-w-2xl my-6 text-lg">
         I love{' '}

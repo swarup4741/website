@@ -16,7 +16,7 @@
     @apply text-lg font-semibold md:text-xl;
   }
   p {
-    @apply leading-relaxed tracking-wide text-gray-700 dark:text-gray-400;
+    @apply leading-relaxed text-gray-700 dark:text-gray-400;
   }
   html {
     scroll-behavior: smooth;
@@ -53,7 +53,7 @@
   .sub-thread-mark::before {
     position: absolute;
     z-index: 10;
-    content: '▲';
+    content: '★';
     top: 50%;
     transform: translateY(-50%);
     left: -2.05rem;
