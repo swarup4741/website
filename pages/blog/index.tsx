@@ -20,8 +20,6 @@ export default function blog({ postMetaArr }: postProps) {
         images: [
           {
             url: MAIN_URL + '/images/og.png',
-            height: 216,
-            width: 384,
             alt: 'Og blog page image'
           }
         ],
