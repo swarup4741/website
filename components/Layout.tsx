@@ -1,4 +1,5 @@
 import { ReactNode } from 'react'
+import Head from 'next/head'
 import { NextSeo, NextSeoProps } from 'next-seo'
 import { MAIN_URL } from '@/lib/constants'
 
@@ -24,20 +25,6 @@ export default function Layout({
         description={description}
         canonical={MAIN_URL + '/'}
         openGraph={{ ...openGraph, type: 'website' }}
-        twitter={{
-          handle: '@swarup4741',
-          site: '@swarup4741',
-          cardType: 'summary_large_image'
-        }}
-        robotsProps={{
-          nosnippet: true,
-          notranslate: true,
-          noimageindex: true,
-          noarchive: true,
-          maxSnippet: -1,
-          maxImagePreview: 'standard',
-          maxVideoPreview: -1
-        }}
         additionalLinkTags={[
           {
             rel: 'shortcut icon',
@@ -99,13 +86,19 @@ export default function Layout({
           {
             name: 'theme-color',
             content: '#ffffff'
-          },
-          {
-            name: 'twitter:image',
-            content: MAIN_URL + '/images/og.png'
           }
         ]}
       />
+      <Head>
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@swarup4741" />
+        <meta name="twitter:creator" content="@swarup4741" />
+        <meta property="twitter:domain" content="swarup.vercel.app" />
+        <meta property="twitter:url" content={MAIN_URL} />
+        <meta name="twitter:title" content={'Swarup Kumar Das | ' + title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:image" content={MAIN_URL + '/images/og.png'} />
+      </Head>
       {children}
     </main>
   )
