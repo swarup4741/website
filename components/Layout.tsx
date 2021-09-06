@@ -23,7 +23,7 @@ export default function Layout({
         defaultTitle="Swarup Kumar Das"
         description={description}
         canonical={MAIN_URL + '/'}
-        openGraph={openGraph}
+        openGraph={{ ...openGraph, type: 'website' }}
         twitter={{
           handle: '@swarup4741',
           site: '@swarup4741',
@@ -94,11 +94,15 @@ export default function Layout({
           },
           {
             name: 'msapplication-config',
-            content: '/icons/browserconfig.xml'
+            content: MAIN_URL + '/icons/browserconfig.xml'
           },
           {
             name: 'theme-color',
             content: '#ffffff'
+          },
+          {
+            name: 'twitter:image',
+            content: MAIN_URL + '/images/og.png'
           }
         ]}
       />

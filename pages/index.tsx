@@ -16,8 +16,6 @@ export default function Home() {
         images: [
           {
             url: MAIN_URL + '/images/og.png',
-            height: 216,
-            width: 384,
             alt: 'Og home page image'
           }
         ],
