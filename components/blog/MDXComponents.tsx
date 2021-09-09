@@ -14,6 +14,7 @@ export const MDXComponents = {
   InlineCode: (props: any) => (
     <InlineCode {...props}>{props.children}</InlineCode>
   ),
+
   // eslint-disable-next-line react/display-name
   code: (props: any) => <CodeBlock {...props}>{props.children}</CodeBlock>
 }
