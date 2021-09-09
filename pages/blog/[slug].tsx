@@ -12,6 +12,7 @@ interface singlePostProps {
 }
 
 export default function blogPost({ mdxSource, frontmatter }: singlePostProps) {
+  const tags = frontmatter.tags.split(',')
   return (
     <Layout
       title={frontmatter.title}
@@ -23,32 +24,31 @@ export default function blogPost({ mdxSource, frontmatter }: singlePostProps) {
         type: 'article',
         article: {
           publishedTime: frontmatter.publishedAt,
-          authors: ['Swarup Kumar Das']
+          authors: ['Swarup Kumar Das'],
+          tags: [...tags]
         },
         images: [
           {
             url: `${MAIN_URL + frontmatter.image}`,
-            width: 800,
-            height: 600,
-            alt: 'Og blog post image'
+            alt: 'blog banner image'
           }
         ],
         site_name: 'Swarup Kumar Das'
       }}
+      twitterImage={frontmatter.image}
     >
-      <div className="mt-6">
-        <BlogPost
-          readTime={frontmatter.readingTime.text}
-          publishedAt={frontmatter.publishedAt}
-          title={frontmatter.title}
-          image={frontmatter.image}
-          slug={frontmatter.slug}
-        />
+      <BlogPost
+        readTime={frontmatter.readingTime.text}
+        publishedAt={frontmatter.publishedAt}
+        title={frontmatter.title}
+        image={frontmatter.image}
+        slug={frontmatter.slug}
+      />
 
-        <div className="prose md:prose-xl dark:prose-dark mt-14">
-          <MDXRemote {...mdxSource} components={MDXComponents} />
-        </div>
+      <div className="mt-10 prose lg:prose-xl dark:prose-dark">
+        <MDXRemote {...mdxSource} components={MDXComponents} />
       </div>
+
       <Reactions slug={frontmatter.slug} />
     </Layout>
   )

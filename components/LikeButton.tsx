@@ -16,10 +16,12 @@ export default function LikeButton({ children, label, slug }: likeButtonProps) {
   const [tap, setTap] = useState(false)
 
   useEffect(() => {
-    const isActiveEmoji = currentUserLikes
+    let isActiveReaction = currentUserLikes
       ? Object.values(currentUserLikes).includes(label)
       : false
-    setTap(isActiveEmoji)
+
+    setTap(isActiveReaction)
+    //eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentUserLikes])
 
   return (

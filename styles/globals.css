@@ -4,19 +4,19 @@
 
 @layer base {
   h1 {
-    @apply text-3xl font-bold md:text-5xl;
+    @apply text-3xl font-bold sm:text-4xl md:text-5xl;
   }
   h2 {
-    @apply text-2xl font-bold md:text-4xl;
+    @apply text-2xl font-bold sm:text-3xl md:text-4xl;
   }
   h3 {
-    @apply text-xl font-bold md:text-2xl;
+    @apply text-xl font-bold sm:text-2xl md:text-3xl;
   }
   h4 {
-    @apply text-lg font-semibold md:text-xl;
+    @apply text-xl font-semibold md:text-2xl;
   }
   p {
-    @apply leading-relaxed text-gray-700 dark:text-gray-400;
+    @apply text-gray-800 dark:text-gray-400 sm:text-lg;
   }
   html {
     scroll-behavior: smooth;
@@ -29,6 +29,12 @@
   }
   .sp-text {
     @apply px-2 font-medium rounded-md;
+  }
+  .separator {
+    @apply divide-x divide-gray-400 dark:divide-gray-500;
+  }
+  .meta-size {
+    @apply text-xs sm:text-sm lg:text-base;
   }
   .toolbar {
     box-shadow: 1.1rem 0 0 #d1d5db, 2.2rem 0 0 #d1d5db;
@@ -53,10 +59,11 @@
   .sub-thread-mark::before {
     position: absolute;
     z-index: 10;
-    content: '★';
+    content: '•';
+    font-size: 2rem;
     top: 50%;
     transform: translateY(-50%);
-    left: -2.05rem;
+    left: -2.1rem;
   }
   .thread-line::before {
     position: absolute;

@@ -9,8 +9,7 @@ export default function usePostViews(slug: string) {
   useEffect(() => {
     const registerView = () => {
       fetch(API_URL + slug, {
-        method: 'POST',
-        mode: 'same-origin'
+        method: 'POST'
       })
     }
 

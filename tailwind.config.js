@@ -1,5 +1,4 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
-const colors = require('tailwindcss/colors')
 
 module.exports = {
   mode: 'jit',
@@ -17,29 +16,21 @@ module.exports = {
       },
       fontWeight: ['focus'],
       border: ['hover'],
-      colors: {
-        transparent: 'transparent',
-        current: 'currentColor',
-        black: colors.black,
-        white: colors.white,
-        gray: colors.gray,
-        blue: colors.blue,
-        green: colors.green
-      },
       typography: theme => ({
         DEFAULT: {
           css: {
             color: theme('colors.gray.700'),
             a: {
-              color: theme('colors.blue.500'),
+              color: theme('colors.blue.600'),
+              textDecoration: 'none',
               '&:hover': {
-                color: theme('colors.blue.700')
+                color: theme('colors.blue.800'),
+                textDecoration: 'underline'
               }
             },
-            pre: {
-              backgroundColor: 'none',
-              padding: '0',
-              fontSize: '1rem'
+            pre: false,
+            p: {
+              fontSize: theme('fontSize.base')
             },
             blockquote: {
               borderLeftColor: theme('colors.purple.600')
@@ -53,7 +44,7 @@ module.exports = {
             a: {
               color: theme('colors.blue.400'),
               '&:hover': {
-                color: theme('colors.blue.600')
+                color: theme('colors.blue.500')
               },
               code: { color: theme('colors.blue.400') }
             },
@@ -78,7 +69,7 @@ module.exports = {
                 '&:before': { backgroundColor: theme('colors.gray.500') }
               }
             },
-            strong: { color: theme('colors.gray.200') },
+            strong: { color: theme('colors.gray.50') },
             thead: {
               color: theme('colors.gray.100')
             },

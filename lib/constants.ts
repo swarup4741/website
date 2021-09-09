@@ -5,7 +5,11 @@ import calculator from '@/public/images/calculator.png'
 import rhymojs from '@/public/images/rhymojs.png'
 import frontendro from '@/public/images/frontendro.png'
 
+// Domain
+
 export const MAIN_URL = 'https://swarup.vercel.app'
+
+// navbar links
 
 export const navLinks = [
   {
@@ -25,6 +29,8 @@ export const navLinks = [
     url: '/blog'
   }
 ]
+
+// List of projects
 
 export const projects = [
   {
