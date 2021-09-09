@@ -33,6 +33,7 @@ export default function BlogPost({
             objectFit="cover"
             className="rounded-full"
             alt="blog author avatar"
+            priority
           />
           <div className="flex separator">
             <p className="mr-2 text-gray-900 meta-size dark:text-gray-100">
@@ -57,11 +58,12 @@ export default function BlogPost({
       <Image
         src={image}
         layout="responsive"
-        height={216}
-        width={384}
+        height={630}
+        width={1200}
         className="rounded-sm"
         objectFit="cover"
         alt="blog image"
+        priority
       />
     </>
   )
