@@ -21,7 +21,7 @@ export default function about() {
       }}
     >
       <h1>My Journey</h1>
-      <p className="max-w-2xl my-6 text-lg">
+      <p className="my-6 leading-relaxed">
         I have been coding since 2013 but when I got admitted to college in 2017
         as a undergraduate student in Mathematics, coding got out of my range.
         But during the pandemic in 2020 I revived my love for coding again. Also

@@ -1,5 +1,5 @@
 import Highlight, { defaultProps, Language } from 'prism-react-renderer'
-import theme from 'prism-react-renderer/themes/nightOwl'
+import theme from 'prism-react-renderer/themes/vsDark'
 
 interface codeProps {
   children: string
@@ -17,7 +17,17 @@ export default function CodeBlock({ children, className }: codeProps) {
       language={language}
     >
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
-        <pre className={className} style={{ ...style, padding: '20px' }}>
+        <pre
+          className={className}
+          style={{
+            ...style,
+            background: '#0E111A',
+            borderRadius: '0.4rem',
+            padding: '1rem 0 0 1.3rem',
+            overflow: 'auto',
+            margin: 0
+          }}
+        >
           {tokens.map((line, i) => (
             <div key={i} {...getLineProps({ line, key: i })}>
               {line.map((token, key) => (

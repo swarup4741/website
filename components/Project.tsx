@@ -32,9 +32,7 @@ export default function Project({
         </div>
       </header>
       <nav
-        className={`absolute inset-0 flex flex-col items-center justify-center gap-4 ${
-          clicked ? 'z-10' : null
-        }`}
+        className={`absolute mx-10 mt-10 space-y-3 ${clicked ? 'z-10' : null}`}
       >
         <Button href={github}>Source code</Button>
         <Button href={web}>Live demo</Button>

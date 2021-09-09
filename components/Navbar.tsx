@@ -13,8 +13,8 @@ export default function Navbar() {
   useEffect(() => setMounted(true), [])
 
   return (
-    <nav className="sticky top-0 z-20 bg-gray-200 border border-gray-300 backdrop-filter backdrop-blur-xl saturate-200 dark:bg-gray-900 bg-opacity-70 dark:bg-opacity-80 dark:border-gray-800">
-      <div className="max-w-3xl px-6 py-4 mx-auto">
+    <nav className="sticky top-0 z-20 bg-white border-b border-gray-300 bg-opacity-70 backdrop-filter backdrop-blur-xl saturate-200 dark:bg-black dark:bg-opacity-70 dark:border-gray-800">
+      <div className="max-w-3xl px-8 py-4 mx-auto">
         <ul className="flex items-center justify-between">
           {navLinks.map(navLink => (
             <li key={navLink.label}>
@@ -34,7 +34,7 @@ export default function Navbar() {
           <li>
             <button
               aria-label="Toggle theme"
-              className="p-3 bg-gray-900 rounded-full cursor-pointer dark:bg-gray-100"
+              className="p-2 text-gray-800 cursor-pointer fill-current dark:text-gray-100"
               onClick={() => {
                 setTheme(theme === 'light' ? 'dark' : 'light')
               }}

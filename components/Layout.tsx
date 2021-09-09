@@ -17,7 +17,7 @@ export default function Layout({
   openGraph
 }: LayoutProps) {
   return (
-    <main className="container max-w-3xl px-6 py-8 mx-auto overflow-hidden">
+    <main className="container max-w-3xl px-8 pt-12 mx-auto overflow-hidden">
       <NextSeo
         title={title}
         titleTemplate="Swarup Kumar Das | %s"

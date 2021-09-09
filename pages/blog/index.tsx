@@ -26,20 +26,20 @@ export default function blog({ postMetaArr }: postProps) {
         site_name: 'Swarup Kumar Das'
       }}
     >
-      <h1 className="mb-6">Blog Posts</h1>
-      <p className="mb-10">
-        A written form of the struggles and learnings that I went through as a
+      <h1>Blog Posts</h1>
+      <p className="my-6 leading-relaxed">
+        A written form of the struggles and learnings that I went through as a{' '}
         {/* eslint-disable-next-line react/no-unescaped-entities */}
         self taught web developer and what I'm building and learning right now.
       </p>
-      <section className="gap-6 sm:grid sm:grid-cols-2">
+      <section className="space-y-4">
         {postMetaArr.map(p => (
           <BlogPostPreview
             key={p.slug}
             slug={p.slug}
             title={p.title}
             summary={p.summary}
-            thumbnail={p.image}
+            publishedAt={p.publishedAt}
           />
         ))}
       </section>

@@ -39,8 +39,7 @@ export default function usePostLikes(slug: string) {
   useEffect(() => {
     const registerLikes = () => {
       fetch(API_URL + slug, {
-        method: 'GET',
-        mode: 'same-origin'
+        method: 'GET'
       })
     }
     registerLikes()
