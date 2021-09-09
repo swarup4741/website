@@ -25,6 +25,7 @@ export default function blog({ postMetaArr }: postProps) {
         ],
         site_name: 'Swarup Kumar Das'
       }}
+      twitterImage="/images/og.png"
     >
       <h1>Blog Posts</h1>
       <p className="my-6 leading-relaxed">

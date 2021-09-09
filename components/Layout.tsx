@@ -8,13 +8,15 @@ interface LayoutProps {
   title: NextSeoProps['title']
   description: NextSeoProps['description']
   openGraph?: NextSeoProps['openGraph']
+  twitterImage?: string
 }
 
 export default function Layout({
   children,
   title,
   description,
-  openGraph
+  openGraph,
+  twitterImage
 }: LayoutProps) {
   return (
     <main className="container max-w-3xl px-8 pt-12 mx-auto overflow-hidden">
@@ -24,7 +26,7 @@ export default function Layout({
         defaultTitle="Swarup Kumar Das"
         description={description}
         canonical={MAIN_URL + '/'}
-        openGraph={{ ...openGraph, type: 'website' }}
+        openGraph={openGraph}
         additionalLinkTags={[
           {
             rel: 'shortcut icon',
@@ -97,7 +99,7 @@ export default function Layout({
         <meta property="twitter:url" content={MAIN_URL} />
         <meta name="twitter:title" content={'Swarup Kumar Das | ' + title} />
         <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content={MAIN_URL + '/images/og.png'} />
+        <meta name="twitter:image" content={MAIN_URL + twitterImage} />
       </Head>
       {children}
     </main>

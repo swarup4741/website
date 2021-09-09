@@ -19,6 +19,7 @@ export default function about() {
         ],
         site_name: 'Swarup Kumar Das'
       }}
+      twitterImage="/images/og.png"
     >
       <h1>My Journey</h1>
       <p className="my-6 leading-relaxed">

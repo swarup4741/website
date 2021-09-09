@@ -12,7 +12,7 @@ interface singlePostProps {
 }
 
 export default function blogPost({ mdxSource, frontmatter }: singlePostProps) {
-  console.log(frontmatter.tags)
+  const tags = frontmatter.tags.split(',')
   return (
     <Layout
       title={frontmatter.title}
@@ -25,7 +25,7 @@ export default function blogPost({ mdxSource, frontmatter }: singlePostProps) {
         article: {
           publishedTime: frontmatter.publishedAt,
           authors: ['Swarup Kumar Das'],
-          tags: []
+          tags: [...tags]
         },
         images: [
           {
@@ -35,6 +35,7 @@ export default function blogPost({ mdxSource, frontmatter }: singlePostProps) {
         ],
         site_name: 'Swarup Kumar Das'
       }}
+      twitterImage={frontmatter.image}
     >
       <BlogPost
         readTime={frontmatter.readingTime.text}

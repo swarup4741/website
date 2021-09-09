@@ -21,6 +21,7 @@ export default function Home() {
         ],
         site_name: 'Swarup Kumar Das'
       }}
+      twitterImage="/images/og.png"
     >
       <Hero />
       <div className="mt-6">
