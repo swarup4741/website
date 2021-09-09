@@ -58,8 +58,8 @@ export default function BlogPost({
       <Image
         src={image}
         layout="responsive"
-        height={216}
-        width={384}
+        height={630}
+        width={1200}
         className="rounded-sm"
         objectFit="cover"
         alt="blog image"
