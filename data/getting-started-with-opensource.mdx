@@ -177,11 +177,8 @@ Now lets push the changes we made. The following commands will help you push the
   your local repository to a remote repository (currently your upstream branch or
   the new branch )
 
-Now you might see that your push is being aborted. This happens because your current new branch has no upstream branch that is it doesn't have the same name as your local branch. This is a safety measure taken by git. But don't worry, you can still push your changes using this command -
-
-<InlineCode>
-  git push --set-upstream-to origin "your_current_branch_name"
-</InlineCode>
+Now you might see that your push is being aborted. This happens because your current new branch has no upstream branch that is it doesn't have the same name as your local branch. This is a safety measure taken by git. But don't worry, you can still push your changes using this command - <InlineCode>
+git push --set-upstream-to origin "your_current_branch_name"</InlineCode>
 
 ```bash
 atomic (main) ▲ ~ git checkout -b input-label
