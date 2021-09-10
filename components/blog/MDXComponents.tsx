@@ -3,7 +3,8 @@ import Image from 'next/image'
 import InlineCode from './InlineCode'
 
 const MDXComponents = {
-  Image,
+  // eslint-disable-next-line react/display-name
+  img: (props: any) => <Image {...props} alt={props.alt} layout="responsive" />,
   // eslint-disable-next-line react/display-name
   a: (props: any) => (
     <a href={props.href} target="_blank" rel="noopener noreferrer">
