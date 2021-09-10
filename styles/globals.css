@@ -63,7 +63,7 @@
     font-size: 2rem;
     top: 50%;
     transform: translateY(-50%);
-    left: -2.1rem;
+    left: -2.05rem;
   }
   .thread-line::before {
     position: absolute;
@@ -89,4 +89,81 @@
       left: -2.1rem;
     }
   }
+}
+
+prose img {
+  @apply m-0;
+}
+
+code {
+  @apply p-0.5 rounded-md dark:text-purple-300 border border-gray-300 dark:border-gray-700 bg-gray-100 dark:bg-gray-900;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  @apply text-gray-400 dark:text-gray-600;
+}
+
+.token.punctuation {
+  @apply text-pink-600 dark:text-pink-400;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  @apply text-purple-500;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  @apply text-yellow-600;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  @apply text-yellow-500;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  @apply text-blue-600 dark:text-blue-400;
+}
+
+.token.function,
+.token.class-name {
+  @apply text-green-600 dark:text-green-400;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+  @apply text-yellow-500;
+}
+
+code[class*='language-'],
+pre[class*='language-'] {
+  @apply text-gray-800 dark:text-gray-200;
+}
+
+pre::-webkit-scrollbar {
+  @apply hidden;
+}
+
+pre {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

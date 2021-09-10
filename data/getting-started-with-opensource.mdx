@@ -2,7 +2,7 @@
 title: 'How to contribute to Open Source effectively using Github'
 summary: 'Getting started with open source contribution and how to use github effectively for our benefit while contributing '
 publishedAt: '2021-09-08'
-image: '/posts/getting-started-with-opensource/banner.png'
+image: '/getting-started-with-opensource/banner.png'
 tags: 'opensource,github,javascript,git,contribution'
 ---
 
@@ -21,39 +21,33 @@ First we need to find an open source project which aligns with our current knowl
 Open [github.com](https://github.com) and sign in to your accout if you haven't. Then navigate to **issues** tab situated in navbar.
 
 <Image
-  src={`/posts/getting-started-with-opensource/issues.png`}
+  alt={`issues tab`}
+  src={`/getting-started-with-opensource/issues.png`}
   height={96}
   width={1900}
-  layout={`responsive`}
-  objectFit={`cover`}
-  alt={`issues tab`}
 />
 
 After opening the issues tab we will get to see a page like this where all the magic will begin.
 
 <Image
-  src={`/posts/getting-started-with-opensource/issues-page.png`}
+  alt={`issues page`}
+  src={`/getting-started-with-opensource/issues-page.png`}
   height={912}
   width={1900}
-  layout={`responsive`}
-  objectFit={`cover`}
-  alt={`issues page`}
 />
 
 Now we will utilize github's powerful search functionality to query through open source projects and find one to contribute to.
 Go to the **search all issues** input box then type the following filters :
 
-<InlineCode>
-  is:open is:issue language:javascript label:"good first issue"
-</InlineCode>
+`is:open is:issue language:javascript label:"good first issue"`
 
 Now lets understand the meaning of each of these filters.
 
-- <InlineCode>is:open is:issue</InlineCode> - This refers to repositories whose issues
+- `is:open is:issue` - This refers to repositories whose issues
   are currently open.
-- <InlineCode>language:javascript</InlineCode> - This refers to repositories whose
+- `language:javascript` - This refers to repositories whose
   major language is javascript.
-- <InlineCode>label:"good first issue"</InlineCode> - This refers to issues that
+- `label:"good first issue"` - This refers to issues that
   have a good first issue label on them which means those issues are good for people
   who are beginners to open source. sometimes you can only find similar label as
   first timers only.
@@ -63,15 +57,13 @@ you can also learn more about these filters over [here](https://docs.github.com/
 Now after hitting search with these filters you will get results somewhat like this.
 
 <Image
-  src={`/posts/getting-started-with-opensource/selected-issue.png`}
+  alt={`filtered issues`}
+  src={`/getting-started-with-opensource/selected-issue.png`}
   height={900}
   width={1890}
-  layout={`responsive`}
-  objectFit={`cover`}
-  alt={`filtered issues`}
 />
 
-Now you will be able to see lots of repositories with <InlineCode>good first issue</InlineCode> label. Go through some of the issue statement and figure out which
+Now you will be able to see lots of repositories with `good first issue` label. Go through some of the issue statement and figure out which
 one you want to work on. I decided to take number 3 issue with repository named
 [LockTech/atomic](https://github.com/LockTech/atomic). I choose it because it seems to be related to **CSS** which
 is an easy topic to work on as a beginner. After opening the issue, we can see
@@ -79,29 +71,25 @@ that the author of this issue has described the problem to be solved. If it seem
 confusing to you,ask questions about it in the comment section. Don't be shy!
 
 <Image
-  src={`/posts/getting-started-with-opensource/issue-desc.png`}
+  alt={`issues description`}
+  src={`/getting-started-with-opensource/issue-desc.png`}
   height={930}
   width={1890}
-  layout={`responsive`}
-  objectFit={`cover`}
-  alt={`issue description`}
 />
 
 After making it all clear ask the maintainer of the project to assign it to you. Also ask him/her on where to begin if you are unable to find the problem in the code base (which usually happens when you face a huge code base for the first time).
 Also ask for help whenever you get stuck because this improves you communication skills which is an essential thing to build up if you want to work in a team.
 
 <Image
-  src={`/posts/getting-started-with-opensource/issue-info.png`}
+  alt={`issues information`}
+  src={`/getting-started-with-opensource/issue-info.png`}
   height={830}
   width={1890}
-  layout={`responsive`}
-  objectFit={`cover`}
-  alt={`issue description`}
 />
 
 ### Forking and Cloning the project
 
-Now its time to **fork** and **clone** the project into our local machine. But before that we must read something called **contribution guidelines** which most of the project has in form of <InlineCode>CONTRIBUTING.md</InlineCode>, a markdown file which is located in the repository itself. This file contains the necessary protocols and
+Now its time to **fork** and **clone** the project into our local machine. But before that we must read something called **contribution guidelines** which most of the project has in form of `CONTRIBUTING.md`, a markdown file which is located in the repository itself. This file contains the necessary protocols and
 information that we need to follow while contributing to an open source project and this varies as per project requirements.
 
 After reading it, we will now **fork** the repository into our account that is we will make a copy of this project into our account so that we do not accidentally affect the
@@ -109,12 +97,10 @@ After reading it, we will now **fork** the repository into our account that is w
 **your_username/project_name**. Now we will **clone** the project into our local machine using the **HTTPS** method. Click on the green **Code** button and then copy the **HTTPS** url.
 
 <Image
-  src={`/posts/getting-started-with-opensource/clone.png`}
+  alt={`cloning the project`}
+  src={`/getting-started-with-opensource/clone.png`}
   height={910}
   width={1890}
-  layout={`responsive`}
-  objectFit={`cover`}
-  alt={`clone the project`}
 />
 
 Now open your terminal (I assume that you have **git** installed) and run the following the command to clone the project.
@@ -123,7 +109,7 @@ Now open your terminal (I assume that you have **git** installed) and run the fo
 git clone https://github.com/{your_username}/atomic.git
 ```
 
-After cloning is complete then **cd** into the project directory using <InlineCode>cd {project_name}</InlineCode>. In my case it will be <InlineCode>cd atomic</InlineCode>. Now run <InlineCode>npm install</InlineCode> or <InlineCode>yarn</InlineCode> (as per your choice and I also assume you have **node** installed) to install all the dependencies of the project.
+After cloning is complete then **cd** into the project directory using `cd {project_name}`. In my case it will be `cd atomic`. Now run `npm install` or `yarn` (as per your choice and I also assume you have **node** installed) to install all the dependencies of the project.
 
 ```bash
 ~ ▲ ~ cd /e/code
@@ -151,34 +137,31 @@ After making your changes now we are ready for the most exciting part of this en
 The changes that I made were adding new utility classes for input validation label of input component.
 
 <Image
-  src={`/posts/getting-started-with-opensource/changes.png`}
+  alt={`changes made`}
+  src={`/getting-started-with-opensource/changes.png`}
   height={945}
   width={1830}
-  layout={`responsive`}
-  objectFit={`cover`}
-  alt={`changes made`}
 />
 
-you can also see the changes made using <InlineCode>git diff</InlineCode> command.
+you can also see the changes made using `git diff` command.
 Now lets push the changes we made. The following commands will help you push the changes.
 
-- <InlineCode>git checkout -b "new_branch_name"</InlineCode> - This command lets
+- `git checkout -b "new_branch_name"` - This command lets
   you checkout of the current branch (main) and switches to the new branch name provided.
   Here we are switching branch because if we push our changes to the current branch
   then we will lose the previous state of the code base and hence cannot access it
   if we need it further along the way.
-- <InlineCode>git add .</InlineCode> - This command lets you add all the files to
+- `git add .` - This command lets you add all the files to
   git staging area which contains a list of all the files you have recently changed.
-- <InlineCode>git commit -m "commit_message"</InlineCode> - This command lets you
+- `git commit -m "commit_message"` - This command lets you
   commit (its like taking a snapshot of your repository) the changes to your local
   repository with a commit message which usually describes briefly the changes you
   made.
-- <InlineCode>git push</InlineCode> - This command lets you upload the changes from
+- `git push` - This command lets you upload the changes from
   your local repository to a remote repository (currently your upstream branch or
   the new branch )
 
-Now you might see that your push is being aborted. This happens because your current new branch has no upstream branch that is it doesn't have the same name as your local branch. This is a safety measure taken by git. But don't worry, you can still push your changes using this command - <InlineCode>
-git push --set-upstream-to origin "your_current_branch_name"</InlineCode>
+Now you might see that your push is being aborted. This happens because your current new branch has no upstream branch that is it doesn't have the same name as your local branch. This is a safety measure taken by git. But don't worry, you can still push your changes using this command - ` git push --set-upstream-to origin "your_current_branch_name"`
 
 ```bash
 atomic (main) ▲ ~ git checkout -b input-label
@@ -205,18 +188,16 @@ remote: Resolving deltas: 100% (5/5), completed with 5 local objects.
 
 ### Creating pull request
 
-After you have pushed your changes, now its time to create a **pull request** which means you are about to create a request with your branch (where you recently pushed your changes, in my case <InlineCode>input-label</InlineCode>) towards the **main branch** to be merged with it.
+After you have pushed your changes, now its time to create a **pull request** which means you are about to create a request with your branch (where you recently pushed your changes, in my case `input-label`) towards the **main branch** to be merged with it.
 Now while creating a pull request you must provide the information about the changes you made.
 
 Now to create a pull request visit the forked repository (you can find it in your list of repositories) in your github account. There you can find a green button named **compare & pull request**. Click it to visit the page shown below and describe the changes you made.
 
 <Image
-  src={`/posts/getting-started-with-opensource/pull-req.png`}
+  alt={`making pull request`}
+  src={`/getting-started-with-opensource/pull-req.png`}
   height={895}
   width={1880}
-  layout={`responsive`}
-  objectFit={`cover`}
-  alt={`pull request made`}
 />
 
 Once you have created the pull request, now we just need to wait for our changes to be approved and merged by the maintainer.
@@ -229,12 +210,10 @@ It might happen that the maintainer may request a further change if he/she is no
 Once your pull request gets merged with the **main branch** you will get a notification similar to this.
 
 <Image
-  src={`/posts/getting-started-with-opensource/merged.png`}
+  alt={`pull request merged`}
+  src={`/getting-started-with-opensource/merged.png`}
   height={915}
   width={1890}
-  layout={`responsive`}
-  objectFit={`cover`}
-  alt={`pull request merged`}
 />
 
 ## Conclusion

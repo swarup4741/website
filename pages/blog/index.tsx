@@ -1,4 +1,4 @@
-import BlogPostPreview from '@/components/blog/BlogPostPreview'
+import BlogPostPreview from '@/components/BlogPostPreview'
 import Layout from '@/components/Layout'
 import { getFileBySlug, getFiles } from '@/lib/mdx'
 import { MAIN_URL } from '@/lib/constants'

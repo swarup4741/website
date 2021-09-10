@@ -11,6 +11,7 @@ module.exports = {
 }
 
 // https://securityheaders.com
+
 const ContentSecurityPolicy = `
   default-src 'self';
   script-src 'self' 'unsafe-eval' 'unsafe-inline';
@@ -32,7 +33,12 @@ const securityHeaders = [
     key: 'Referrer-Policy',
     value: 'origin-when-cross-origin'
   },
-  // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options
+  // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin
+  {
+    key: 'Acess-Control-Allow-Origin',
+    value: '*'
+  },
+  //   // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options
   {
     key: 'X-Frame-Options',
     value: 'DENY'
@@ -51,11 +57,5 @@ const securityHeaders = [
   {
     key: 'Strict-Transport-Security',
     value: 'max-age=31536000; includeSubDomains; preload'
-  },
-  // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Feature-Policy
-  // Opt-out of Google FLoC: https://amifloced.org/
-  {
-    key: 'Permissions-Policy',
-    value: 'camera=(), microphone=(), geolocation=(), interest-cohort=()'
   }
 ]
