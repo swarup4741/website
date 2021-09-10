@@ -1,7 +1,7 @@
 import { getFileBySlug, getFiles } from '@/lib/mdx'
 import Layout from '@/components/Layout'
 import { MDXRemote } from 'next-mdx-remote'
-import { MDXComponents } from '@/components/blog/MDXComponents'
+import MDXComponents from '@/components/blog/MDXComponents'
 import BlogPost from '@/components/blog/BlogPost'
 import Reactions from '@/components/Reactions'
 import { MAIN_URL } from '@/lib/constants'
