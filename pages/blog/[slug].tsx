@@ -1,18 +1,21 @@
-import { getFileBySlug, getFiles } from '@/lib/mdx'
+import { useMemo } from 'react'
+import { getMDXComponent } from 'mdx-bundler/client'
 import Layout from '@/components/Layout'
-import { MDXRemote } from 'next-mdx-remote'
-import MDXComponents from '@/components/blog/MDXComponents'
-import BlogPost from '@/components/blog/BlogPost'
+import MDXComponents from '@/components/MDXComponents'
+import BlogPostLayout from '@/components/BlogPost'
 import Reactions from '@/components/Reactions'
+import { getFileBySlug, getFiles } from '@/lib/mdx'
 import { MAIN_URL } from '@/lib/constants'
 
 interface singlePostProps {
-  mdxSource: any
+  code: any
   frontmatter: any
 }
 
-export default function blogPost({ mdxSource, frontmatter }: singlePostProps) {
+export default function BlogPost({ code, frontmatter }: singlePostProps) {
   const tags = frontmatter.tags.split(',')
+  const Component: any = useMemo(() => getMDXComponent(code), [code])
+
   return (
     <Layout
       title={frontmatter.title}
@@ -23,21 +26,21 @@ export default function blogPost({ mdxSource, frontmatter }: singlePostProps) {
         description: frontmatter.summary,
         type: 'article',
         article: {
-          publishedTime: frontmatter.publishedAt,
+          publishedTime: new Date(frontmatter.publishedAt).toISOString(),
           authors: ['Swarup Kumar Das'],
           tags: [...tags]
         },
         images: [
           {
-            url: `${MAIN_URL + frontmatter.image}`,
+            url: `${MAIN_URL}/images/posts${frontmatter.image}`,
             alt: 'blog banner image'
           }
         ],
         site_name: 'Swarup Kumar Das'
       }}
-      twitterImage={frontmatter.image}
+      twitterImage={`/images/posts${frontmatter.image}`}
     >
-      <BlogPost
+      <BlogPostLayout
         readTime={frontmatter.readingTime.text}
         publishedAt={frontmatter.publishedAt}
         title={frontmatter.title}
@@ -45,9 +48,9 @@ export default function blogPost({ mdxSource, frontmatter }: singlePostProps) {
         slug={frontmatter.slug}
       />
 
-      <div className="mt-10 prose lg:prose-xl dark:prose-dark">
-        <MDXRemote {...mdxSource} components={MDXComponents} />
-      </div>
+      <article className="mt-10 prose lg:prose-xl dark:prose-dark">
+        <Component components={MDXComponents} />
+      </article>
 
       <Reactions slug={frontmatter.slug} />
     </Layout>
@@ -70,5 +73,5 @@ export async function getStaticPaths() {
 export async function getStaticProps({ params }: { params: { slug: string } }) {
   const post = await getFileBySlug(params.slug)
 
-  return { props: post }
+  return { props: { ...post } }
 }

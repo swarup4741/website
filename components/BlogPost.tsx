@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import usePostViews from '@/lib/usePostViews'
-import Loader from '../Loader'
+import Loader from './Loader'
 import { formatDate } from '@/lib/date'
 
 interface postLayoutProps {
@@ -56,7 +56,7 @@ export default function BlogPost({
         </div>
       </div>
       <Image
-        src={image}
+        src={`/images/posts${image}`}
         layout="responsive"
         height={630}
         width={1200}

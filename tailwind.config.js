@@ -28,9 +28,16 @@ module.exports = {
                 textDecoration: 'underline'
               }
             },
-            pre: false,
             p: {
               fontSize: theme('fontSize.base')
+            },
+            code: {
+              color: theme('colors.purple.600')
+            },
+            pre: {
+              background: theme('colors.gray.100'),
+              borderWidth: theme('spacing.px'),
+              borderColor: theme('colors.gray.300')
             },
             blockquote: {
               borderLeftColor: theme('colors.purple.600')
@@ -69,7 +76,11 @@ module.exports = {
                 '&:before': { backgroundColor: theme('colors.gray.500') }
               }
             },
-            strong: { color: theme('colors.gray.50') },
+            strong: { color: theme('colors.gray.100') },
+            pre: {
+              background: theme('colors.gray.900'),
+              borderColor: theme('colors.gray.700')
+            },
             thead: {
               color: theme('colors.gray.100')
             },

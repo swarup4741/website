@@ -11,6 +11,7 @@ module.exports = {
 }
 
 // https://securityheaders.com
+
 const ContentSecurityPolicy = `
   default-src 'self';
   script-src 'self' 'unsafe-eval' 'unsafe-inline';
@@ -32,12 +33,12 @@ const securityHeaders = [
     key: 'Referrer-Policy',
     value: 'origin-when-cross-origin'
   },
-  // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Headers
+  // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Allow-Origin
   {
-    key: 'Acess-Control-Allow-Headers',
+    key: 'Acess-Control-Allow-Origin',
     value: '*'
   },
-  // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options
+  //   // https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options
   {
     key: 'X-Frame-Options',
     value: 'DENY'

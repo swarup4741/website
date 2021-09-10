@@ -1,5 +1,5 @@
 import Layout from '@/components/Layout'
-import Timeline from '@/components/timeline'
+import Timeline from '@/components/Timeline'
 import { MAIN_URL } from '@/lib/constants'
 
 export default function about() {
