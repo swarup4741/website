@@ -32,13 +32,13 @@ const BlogPost = ({ code, frontmatter }: singlePostProps) => {
         },
         images: [
           {
-            url: `${MAIN_URL}/static/images${frontmatter.image}`,
+            url: `${MAIN_URL}/images${frontmatter.image}`,
             alt: 'blog banner image'
           }
         ],
         site_name: 'Swarup Kumar Das'
       }}
-      twitterImage={`/static/images${frontmatter.image}`}
+      twitterImage={`/images${frontmatter.image}`}
     >
       <BlogPostHeader
         readTime={frontmatter.readingTime.text}

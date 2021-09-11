@@ -19,13 +19,13 @@ const Blog = ({ posts }: postProps) => {
           "A written form of the struggles and learnings that I went through as a self taught web developer and what I'm building and learning right now.",
         images: [
           {
-            url: MAIN_URL + '/static/images/og.png',
+            url: MAIN_URL + '/images/og.png',
             alt: 'Og blog page image'
           }
         ],
         site_name: 'Swarup Kumar Das'
       }}
-      twitterImage="/static/images/og.png"
+      twitterImage="/images/og.png"
     >
       <h1>Blog Posts</h1>
       <p className="my-6 leading-relaxed">

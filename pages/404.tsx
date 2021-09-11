@@ -1,5 +1,5 @@
 import { NextPage } from 'next'
-import errorBg from '@/public/static/images/errorBg.png'
+import errorBg from '@/public/images/errorBg.png'
 import Image from 'next/image'
 import Layout from '@/components/Layout'
 

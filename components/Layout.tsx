@@ -30,42 +30,42 @@ export default function Layout({
         additionalLinkTags={[
           {
             rel: 'shortcut icon',
-            href: '/static/icons/favicon.ico',
+            href: '/icons/favicon.ico',
             type: 'image/x-icon'
           },
           {
             rel: 'apple-touch-icon',
-            href: '/static/icons/apple-touch-icon.png',
+            href: '/icons/apple-touch-icon.png',
             sizes: '180x180'
           },
           {
             rel: 'icon',
-            href: '/static/icons/favicon-16x16.png',
+            href: '/icons/favicon-16x16.png',
             sizes: '16x16'
           },
           {
             rel: 'icon',
-            href: '/static/icons/favicon-32x32.png',
+            href: '/icons/favicon-32x32.png',
             sizes: '32x32'
           },
           {
             rel: 'icon',
-            href: '/static/icons/android-chrome-192x192.png',
+            href: '/icons/android-chrome-192x192.png',
             sizes: '192x192'
           },
           {
             rel: 'icon',
-            href: '/static/icons/android-chrome-512x512.png',
+            href: '/icons/android-chrome-512x512.png',
             sizes: '512x512'
           },
           {
             rel: 'mask-icon',
-            href: '/static/icons/safari-pinned-tab.svg',
+            href: '/icons/safari-pinned-tab.svg',
             color: '#000000'
           },
           {
             rel: 'manifest',
-            href: '/static/icons/site.webmanifest'
+            href: '/icons/site.webmanifest'
           }
         ]}
         additionalMetaTags={[
@@ -83,7 +83,7 @@ export default function Layout({
           },
           {
             name: 'msapplication-config',
-            content: MAIN_URL + '/static/icons/browserconfig.xml'
+            content: MAIN_URL + '/icons/browserconfig.xml'
           },
           {
             name: 'theme-color',

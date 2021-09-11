@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import SwarupImg from '@/public/static/images/self.jpg'
+import SwarupImg from '@/public/images/self.jpg'
 import Button from '@/components/Button'
 
 export default function Hero() {
