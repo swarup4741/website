@@ -1,13 +1,14 @@
+import { NextPage } from 'next'
 import BlogPostPreview from '@/components/BlogPostPreview'
 import Layout from '@/components/Layout'
-import { getFileBySlug, getFiles } from '@/lib/mdx'
+import { getAllFilesFrontMatter } from '@/lib/mdx'
 import { MAIN_URL } from '@/lib/constants'
 
 interface postProps {
-  postMetaArr: any[]
+  posts: any[]
 }
 
-export default function blog({ postMetaArr }: postProps) {
+const Blog = ({ posts }: postProps) => {
   return (
     <Layout
       title="Blog"
@@ -34,7 +35,7 @@ export default function blog({ postMetaArr }: postProps) {
         self taught web developer and what I'm building and learning right now.
       </p>
       <section className="space-y-4">
-        {postMetaArr.map(p => (
+        {posts.map(p => (
           <BlogPostPreview
             key={p.slug}
             slug={p.slug}
@@ -49,18 +50,9 @@ export default function blog({ postMetaArr }: postProps) {
 }
 
 export async function getStaticProps() {
-  const posts = await getFiles()
-  const slugs = posts.map(p => p.replace(/\.mdx/, ''))
+  const posts = await getAllFilesFrontMatter()
 
-  const postMetaArr: any[] = []
-
-  await Promise.all(
-    slugs.map(async s => {
-      const { frontmatter } = await getFileBySlug(s)
-      postMetaArr.push(frontmatter)
-    })
-  )
-  return {
-    props: { postMetaArr }
-  }
+  return { props: { posts } }
 }
+
+export default Blog

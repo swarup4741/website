@@ -12,7 +12,7 @@ interface singlePostProps {
   frontmatter: any
 }
 
-export default function BlogPost({ code, frontmatter }: singlePostProps) {
+const BlogPost = ({ code, frontmatter }: singlePostProps) => {
   const tags = frontmatter.tags.split(',')
   const Component: any = useMemo(() => getMDXComponent(code), [code])
 
@@ -75,3 +75,5 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
 
   return { props: { ...post } }
 }
+
+export default BlogPost
