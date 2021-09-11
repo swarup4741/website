@@ -1,4 +1,3 @@
-import { NextPage } from 'next'
 import BlogPostPreview from '@/components/BlogPostPreview'
 import Layout from '@/components/Layout'
 import { getAllFilesFrontMatter } from '@/lib/mdx'

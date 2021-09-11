@@ -56,7 +56,7 @@ export default function BlogPost({
         </div>
       </div>
       <Image
-        src={`/images/posts${image}`}
+        src={`/images${image}`}
         layout="responsive"
         height={630}
         width={1200}
