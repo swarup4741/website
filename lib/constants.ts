@@ -1,9 +1,9 @@
-import stacksense from '@/public/images/stacksense.png'
-import covid from '@/public/images/covid.png'
-import spark from '@/public/images/spark.png'
-import calculator from '@/public/images/calculator.png'
-import rhymojs from '@/public/images/rhymojs.png'
-import frontendro from '@/public/images/frontendro.png'
+import stacksense from '@/public/static/images/stacksense.png'
+import covid from '@/public/static/images/covid.png'
+import spark from '@/public/static/images/spark.png'
+import calculator from '@/public/static/images/calculator.png'
+import rhymojs from '@/public/static/images/rhymojs.png'
+import frontendro from '@/public/static/images/frontendro.png'
 
 // Domain
 

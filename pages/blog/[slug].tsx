@@ -2,7 +2,7 @@ import { useMemo } from 'react'
 import { getMDXComponent } from 'mdx-bundler/client'
 import Layout from '@/components/Layout'
 import MDXComponents from '@/components/MDXComponents'
-import BlogPostLayout from '@/components/BlogPost'
+import BlogPostHeader from '@/components/BlogPost'
 import Reactions from '@/components/Reactions'
 import { getFileBySlug, getFiles } from '@/lib/mdx'
 import { MAIN_URL } from '@/lib/constants'
@@ -32,15 +32,15 @@ const BlogPost = ({ code, frontmatter }: singlePostProps) => {
         },
         images: [
           {
-            url: `${MAIN_URL}/images/posts${frontmatter.image}`,
+            url: `${MAIN_URL}/static/images${frontmatter.image}`,
             alt: 'blog banner image'
           }
         ],
         site_name: 'Swarup Kumar Das'
       }}
-      twitterImage={`/images/posts${frontmatter.image}`}
+      twitterImage={`/static/images${frontmatter.image}`}
     >
-      <BlogPostLayout
+      <BlogPostHeader
         readTime={frontmatter.readingTime.text}
         publishedAt={frontmatter.publishedAt}
         title={frontmatter.title}

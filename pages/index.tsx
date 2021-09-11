@@ -16,13 +16,13 @@ const Home: NextPage = () => {
           'I love writing and reading code.A designer not by profession but by passion.',
         images: [
           {
-            url: MAIN_URL + '/images/og.png',
+            url: MAIN_URL + '/static/images/og.png',
             alt: 'Og home page image'
           }
         ],
         site_name: 'Swarup Kumar Das'
       }}
-      twitterImage="/images/og.png"
+      twitterImage="/static/images/og.png"
     >
       <Hero />
       <div className="mt-6">

@@ -14,13 +14,13 @@ const About: NextPage = () => {
         description: 'About myself and my journey so far.',
         images: [
           {
-            url: MAIN_URL + '/images/og.png',
+            url: MAIN_URL + '/static/images/og.png',
             alt: 'Og blog page image'
           }
         ],
         site_name: 'Swarup Kumar Das'
       }}
-      twitterImage="/images/og.png"
+      twitterImage="/static/images/og.png"
     >
       <h1>My Journey</h1>
       <p className="my-6 leading-relaxed">

@@ -27,7 +27,7 @@ export default function BlogPost({
       <div className="my-6 sm:items-center sm:justify-between sm:flex">
         <div className="flex items-center gap-3">
           <Image
-            src="/images/self.jpg"
+            src="/static/images/self.jpg"
             height={28}
             width={28}
             objectFit="cover"
@@ -56,7 +56,7 @@ export default function BlogPost({
         </div>
       </div>
       <Image
-        src={`/images/posts${image}`}
+        src={`/static/images${image}`}
         layout="responsive"
         height={630}
         width={1200}
