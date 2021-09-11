@@ -1,8 +1,9 @@
+import { NextPage } from 'next'
 import Layout from '@/components/Layout'
 import Timeline from '@/components/Timeline'
 import { MAIN_URL } from '@/lib/constants'
 
-export default function about() {
+const About: NextPage = () => {
   return (
     <Layout
       title="About"
@@ -34,3 +35,5 @@ export default function about() {
     </Layout>
   )
 }
+
+export default About

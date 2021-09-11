@@ -1,9 +1,10 @@
+import { NextPage } from 'next'
 import Layout from '@/components/Layout'
 import Project from '@/components/Project'
 import Hero from '@/components/Hero'
 import { MAIN_URL, projects } from '@/lib/constants'
 
-export default function Home() {
+const Home: NextPage = () => {
   return (
     <Layout
       title="Home"
@@ -45,3 +46,5 @@ export default function Home() {
     </Layout>
   )
 }
+
+export default Home

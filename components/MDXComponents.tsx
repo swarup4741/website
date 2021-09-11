@@ -18,13 +18,8 @@ const Anchor = (props: AnchorProps) => (
   </a>
 )
 
-const NextImage = (props: ImageProps) => (
-  <Image
-    {...props}
-    src={`/images/posts${props.src}`}
-    alt={props.alt}
-    objectFit="cover"
-  />
+const NextImage = (props: any) => (
+  <Image {...props} src={`/images/posts${props.src}`} alt={props.alt} />
 )
 
 const MDXComponents = {

@@ -1,8 +1,9 @@
+import { NextPage } from 'next'
 import errorBg from '@/public/images/errorBg.png'
 import Image from 'next/image'
 import Layout from '@/components/Layout'
 
-export default function errorPage() {
+const ErrorPage: NextPage = () => {
   return (
     <Layout
       title="Page not found"
@@ -24,3 +25,5 @@ export default function errorPage() {
     </Layout>
   )
 }
+
+export default ErrorPage
