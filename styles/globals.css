@@ -3,6 +3,11 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 10rem;
+    @apply transition-colors duration-200;
+  }
   h1 {
     @apply text-3xl font-bold sm:text-4xl md:text-5xl;
   }
@@ -17,10 +22,6 @@
   }
   p {
     @apply text-gray-800 dark:text-gray-400 sm:text-lg;
-  }
-  html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 10rem;
   }
 }
 @layer components {
@@ -91,7 +92,7 @@
   }
 }
 
-prose img {
+.prose img {
   @apply m-0;
 }
 
